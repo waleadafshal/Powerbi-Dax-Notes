@@ -206,6 +206,45 @@ Top2Products = TOPN(2, Sales, Sales[Price], DESC)
 
 TopCustomer = TOPN(1, Sales, Sales[Quantity], DESC)
 ```
+    
+
+
+
+# Year-over-Year (YoY) Growth
+
+**Definition:**  
+Year-over-Year (YoY) Growth measures the percentage change of a metric (e.g., revenue) compared to the same period in the previous year. It helps to analyze business growth while accounting for seasonality and yearly trends.
+
+---
+
+### Formula
+
+\[
+\text{YoY Growth} = \frac{\text{Current Year Value} - \text{Previous Year Value}}{\text{Previous Year Value}} \times 100
+\]
+
+---
+
+### Example Calculation
+
+- Current Year Revenue (2024): $120,000  
+- Previous Year Revenue (2023): $100,000  
+
+\[
+\text{YoY Growth} = \frac{120,000 - 100,000}{100,000} \times 100 = 20\%
+\]
+
+---
+
+### DAX Measure for Revenue YoY Growth
+
+```DAX
+Revenue YoY = 
+DIVIDE(
+    [Total Revenue] - [Revenue Previous Year],
+    [Revenue Previous Year],
+    0
+)
 
 ---
 
