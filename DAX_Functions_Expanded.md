@@ -207,9 +207,6 @@ Top2Products = TOPN(2, Sales, Sales[Price], DESC)
 TopCustomer = TOPN(1, Sales, Sales[Quantity], DESC)
 ```
     
-
-
-
 # Year-over-Year (YoY) Growth
 
 **Definition:**  
@@ -246,10 +243,5 @@ DIVIDE(
     0
 )
 
----
 
-## 📚 Summary
-
-This markdown file demonstrates DAX usage with real-world-like sample data.  
-Continue adding your own examples as you grow in Power BI!
 
